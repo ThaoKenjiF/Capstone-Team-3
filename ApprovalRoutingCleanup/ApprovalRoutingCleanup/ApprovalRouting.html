@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Aproval Routing Cleanup</title>
+
+	<style>
+		table, th, td {
+			border: 1px solid grey;
+			border-collapse: collapse;
+			padding: 5px;
+		}
+
+			table tr:nth-child(odd) {
+				background-color: #f2f2f2;
+			}
+
+			table tr:nth-child(even) {
+				background-color: #ffffff;
+			}
+	</style>
+</head>
+
+<body>
+	<h2>Aproval Routing Cleanup</h2>
+	<div ng-app="" ng-controller="approvalController">
+
+		Selected Approval
+		<table>
+			<tr>
+				<th>LU_Name</th>
+				<!--<th>KEY_REF</th>-->
+				<th>Description</th>
+				<!--<th>Step No</th>
+				<th>App Date</th>
+				<th>Prev App Date</th>-->
+				<th>Person Id</th>
+				<th>Status</th>
+			</tr>
+
+			<tr>
+				<td>{{ selected.LU_Name }}</td>
+				<!--<td>{{ selected.Key_Ref }}</td>-->
+				<td>{{ selected.Description }}</td>
+				<!--<td>{{ selected.Step_No }}</td>
+				<td>{{ selected.App_Date }}</td>
+				<td>{{ selected.Prev_Approval_Date }}</td>-->
+				<td>{{ selected.Person_ID }}</td>
+				<td>{{ selected.Approval_Status }}</td>
+			</tr>
+		</table>
+
+		<div style="height:400px;width:700px;overflow:auto;">
+		Approvals
+		<table>
+			<tr>
+				<th>LU_Name</th>
+				<!--<th>KEY_REF</th>-->
+				<th>Description</th>
+				<!--<th>Step No</th>
+				<th>App Date</th>
+				<th>Prev App Date</th>-->
+				<th>Person Id</th>
+				<th>Status</th>
+			</tr>
+
+			<tr ng-repeat="approval in approvals" ng-click="select(approval)">
+				<td>{{ approval.LU_Name }}</td>
+				<!--<td>{{ approval.Key_Ref }}</td>-->
+				<td>{{ approval.Description }}</td>
+				<!--<td>{{ approval.Step_No }}</td>
+				<td>{{ approval.App_Date }}</td>
+				<td>{{ approval.Prev_Approval_Date }}</td>-->
+				<td>{{ approval.Person_ID }}</td>
+				<td>{{ approval.Approval_Status }}</td>
+			</tr>
+		</table>
+		</div>
+		
+	</div>
+
+	<script>
+         function approvalController($scope,$http) {
+            var url = "api/ApprovalRouting";
+
+            $http.get(url).then( function(response) {
+               $scope.approvals = response.data;
+			});
+
+			 $scope.select = function (approval) {
+				 $scope.selected = approval;
+			 };
+		}
+		
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js">
+	</script>
+
+</body>
+</html>
