@@ -1,0 +1,220 @@
+/* LOGIN */
+#div_login{
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 630px;
+    height: auto;
+    box-shadow: 0px 2px 2px 0px  gray;
+    margin: 100 auto;
+	padding-bottom: 5px;
+}
+
+#div_login h1{
+    margin-top: 0px;
+    font-weight: normal;
+    padding: 10px;
+    background-color: cornflowerblue;
+    color: white;
+    font-family: sans-serif;
+}
+
+#div_login div{
+    clear: both;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#div_login .textbox{
+    width: 96%;
+    padding: 10px;
+}
+
+#div_login input[type=submit]{
+    width: 100%;
+    padding: 7px;
+   margin-top: 20px;
+    background-color:cornflowerblue;
+    border: 0px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+#div_login input[type="submit"]:hover {
+    background-color: #2868c7;
+      transition: background-color 0.2s;
+  }
+
+/* media */
+@media screen and (max-width:720px){
+    .container{
+        width: 100%;
+    }
+    #div_login{
+        width: 99%;
+    }
+}
+/* Header */
+.navtop {
+	background-color: #2f3947;
+	height: 60px;
+	width: 100%;
+	border: 0;
+}
+.navtop div {
+	display: flex;
+	margin: 0 auto;
+	width: 1000px;
+	height: 100%;
+}
+.navtop div h1, .navtop div a {
+	display: inline-flex;
+	align-items: center;
+	
+}
+.navtop div h1 {
+	flex: 1;
+	font-size: 24px;
+	padding: 0;
+	margin: 0;
+	color: #eaebed;
+	font-weight: bold; 
+}
+.navtop div a {
+	padding: 0 20px;
+	text-decoration: none;
+	color: #eaebed;
+	font-weight: bold;
+	font-size: 24px;
+	
+}
+.navtop div a i {
+	padding: 2px 8px 0 0;
+}
+.navtop div a:hover {
+	color: #eaebed;
+}
+body.loggedin {
+	background-color: #f3f4f7;
+}
+ /* Style the search field */
+ form.search_person_id input[type=text] {
+	padding: 10px;
+	font-size: 17px;
+	border: 1px solid grey;
+	float: left;
+	width: 80%;
+	background: #f1f1f1;
+
+}
+
+/* Style the submit button */
+form.search_person_id button {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	background: #4BB543;
+	color: white;
+	font-size: 17px;
+	border: 1px solid grey;
+	border-left: none;
+	/* Prevent double borders */
+	cursor: pointer;
+}
+
+form.search_person_id button:hover {
+	background: #4BB543;
+}
+
+/* Clear floats */
+form.search_person_id ::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Update  */
+
+input {
+	font-family: Arial;
+	font-size: 14px;
+}
+
+label {
+	font-family: Arial;
+	font-size: 14px;
+	color: #999999;
+}
+
+.tblSaveForm {
+	border-top: 3px SkyBlue solid;
+	background-color: #f8f8f8;
+}
+
+.header {
+	background-color: lightskyblue;
+}
+
+.tablerow {
+	background-color: #A7D6F1;
+	color: white;
+}
+
+.buttom {
+	background-color: lightskyblue;
+	padding: 5px;
+	border-color: white;
+	border-radius: 4px;
+	color: white;
+}
+
+.message {
+	color: #FF0000;
+	text-align: center;
+	width: 100%;
+}
+
+.txtField {
+	padding: 5px;
+	border: #fedc4d 1px solid;
+	border-radius: 12px;
+	width: 500px;
+}
+
+.evenRow {
+	background-color: #E2EDF9;
+	font-size: 12px;
+	color: #101010;
+}
+
+.evenRow:hover {
+	background-color: #ffef46;
+}
+
+.oddRow {
+	background-color: #B3E8FF;
+	font-size: 12px;
+	color: #101010;
+}
+
+.oddRow:hover {
+	background-color: #ffef46;
+}
+
+.tblListForm {
+	border-top: 2px #999999 solid;
+}
+
+.listheader {
+	background-color: #fedc4d;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.link {
+	text-decoration: none;
+	color: #5e8fc7;
+	font-size: 11px;
+}
+
